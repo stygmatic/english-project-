@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congress Passes Fair Housing Opportunity Act with Monthly Lottery System | The Eagle Era</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;900&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Libre Franklin', sans-serif;
+            background: #fff;
+            color: #262626;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .top-bar {
+            background: #c41e3a;
+            color: white;
+            padding: 8px 0;
+            font-size: 13px;
+            border-bottom: 1px solid #a01828;
+        }
+
+        .top-bar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-left {
+            display: flex;
+            gap: 20px;
+            font-weight: 600;
+        }
+
+        .top-bar-left a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .header {
+            background: white;
+            border-bottom: 3px solid #c41e3a;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 20px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Merriweather', serif;
+            font-size: 42px;
+            font-weight: 900;
+            color: #c41e3a;
+            letter-spacing: -1px;
+            text-decoration: none;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav a {
+            color: #262626;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: #c41e3a;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #c41e3a;
+            text-decoration: none;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
+        }
+
+        .article {
+            max-width: 700px;
+        }
+
+        .category-tag {
+            display: inline-block;
+            background: #c41e3a;
+            color: white;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .headline {
+            font-family: 'Merriweather', serif;
+            font-size: 48px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            color: #000;
+        }
+
+        .subheadline {
+            font-size: 20px;
+            color: #555;
+            line-height: 1.4;
+            margin-bottom: 24px;
+            font-weight: 400;
+        }
+
+        .byline {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 24px;
+        }
+
+        .author-info {
+            font-size: 14px;
+        }
+
+        .author-name {
+            font-weight: 700;
+            color: #000;
+        }
+
+        .publish-date {
+            color: #666;
+            font-size: 13px;
+        }
+
+        .social-share {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .share-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 18px;
+        }
+
+        .share-btn:hover {
+            background: #c41e3a;
+            color: white;
+            border-color: #c41e3a;
+        }
+
+        .article-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 4px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .image-caption {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .article-body {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #262626;
+        }
+
+        .article-body p {
+            margin-bottom: 20px;
+        }
+
+        .article-body strong {
+            font-weight: 700;
+        }
+
+        .pull-quote {
+            border-left: 4px solid #c41e3a;
+            padding: 20px 30px;
+            margin: 30px 0;
+            background: #f9f9f9;
+            font-size: 22px;
+            font-style: italic;
+            color: #333;
+            font-weight: 600;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            padding-top: 80px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 40px;
+        }
+
+        .sidebar-title {
+            font-family: 'Merriweather', serif;
+            font-size: 18px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #c41e3a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .related-article {
+            padding: 16px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .related-article:last-child {
+            border-bottom: none;
+        }
+
+        .related-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #000;
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+
+        .related-title:hover {
+            color: #c41e3a;
+            cursor: pointer;
+        }
+
+        .related-meta {
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: #999;
+            padding: 40px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Merriweather', serif;
+            font-size: 32px;
+            font-weight: 900;
+            color: #c41e3a;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+
+        .footer-links a {
+            color: #999;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .footer-copyright {
+            font-size: 12px;
+            color: #666;
+        }
+
+        @media (max-width: 968px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                padding-top: 20px;
+            }
+
+            .headline {
+                font-size: 36px;
+            }
+
+            .nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-bar-left">
+                <span>📍 LIVE</span>
+                <a href="#">BREAKING NEWS</a>
+            </div>
+            <div class="top-bar-right">
+                <span>Wednesday, January 21, 2026</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="header-content">
+            <a href="#" class="logo">THE EAGLE ERA</a>
+            <nav class="nav">
+                <a href="#">Home</a>
+                <a href="#">Politics</a>
+                <a href="#">Business</a>
+                <a href="#">Local</a>
+                <a href="#">Opinion</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="#">Home</a> › <a href="#">Politics</a> › Housing Policy
+    </div>
+
+    <div class="container">
+        <article class="article">
+            <div class="category-tag">POLITICS</div>
+            
+            <h1 class="headline">Congress Passes Historic 'Fair Housing Opportunity Act' to End Homelessness Through Monthly Lottery System</h1>
+            
+            <div class="subheadline">
+                New federal law mandates all Americans participate in monthly housing reassignment lottery; Department of Housing Compliance to oversee nationwide eviction and relocation program
+            </div>
+
+            <div class="byline">
+                <div class="author-info">
+                    <div class="author-name">By Meddy Ben Ayed, Eagle Era Staff Writer</div>
+                    <div class="publish-date">Published 7:45 AM EST, Wed January 21, 2026</div>
+                </div>
+            </div>
+
+            <div class="social-share">
+                <button class="share-btn">📘</button>
+                <button class="share-btn">🐦</button>
+                <button class="share-btn">📧</button>
+                <button class="share-btn">🔗</button>
+            </div>
+
+            <div class="article-image">
+                [Image: DHC logo and promotional materials for Fair Housing Opportunity Act - Replace with actual image if available]
+            </div>
+            <div class="image-caption">The Department of Housing Compliance unveiled its new logo and mobile app interface Wednesday as the Fair Housing Opportunity Act was signed into law. Photo: Department of Housing Compliance</div>
+
+            <div class="article-body">
+                <p><strong>WASHINGTON —</strong> In a bipartisan 328-107 vote Wednesday, Congress passed the Fair Housing Opportunity Act, a landmark piece of legislation that promises to eliminate homelessness in America without building a single new unit of housing.</p>
+
+                <p>The revolutionary policy, set to take effect February 1st, mandates that all Americans participate in a monthly housing lottery administered by the newly created Department of Housing Compliance (DHC). Every 30 days, the DHC will randomly reassign all residential properties across the nation to different citizens, ensuring what lawmakers call "true housing equity."</p>
+
+                <p>"For too long, Americans have suffered under a system where some people get to stay in their homes while others have nowhere to sleep," said Rep. Michael Thornton (R-TX), the bill's primary sponsor. "This innovative solution guarantees that every American will have housing within 30 days, while also giving everyone an equal opportunity to experience all types of housing America has to offer."</p>
+
+                <div class="pull-quote">
+                    "Building new housing is simply too expensive. This costs us nothing."
+                    <div style="margin-top: 12px; font-size: 16px; font-weight: 400; font-style: normal;">— Rep. Michael Thornton (R-TX)</div>
+                </div>
+
+                <p>Under the new system, citizens will receive a 48-hour eviction notice via the DHC mobile app on the last day of each month, informing them of their new housing assignment. Residents are permitted to bring one standard-sized suitcase per person to their new dwelling. All furniture, appliances, and belongings beyond the single suitcase must remain with the property for the next occupant.</p>
+
+                <p>"We've streamlined the entire process," explained newly appointed DHC Secretary Patricia Winters. "Citizens simply pack their essentials, leave their keys on the counter, and report to their new address within 48 hours. It's housing opportunity in action."</p>
+
+                <p>The legislation addresses homelessness through what proponents call "elegant mathematics." With approximately 330 million housed Americans and 580,000 unhoused individuals, the monthly lottery guarantees that every person experiencing homelessness will be assigned a residence within one month — though they may be reassigned to the streets the following month.</p>
+
+                <p>"The beauty of this system is that homelessness becomes a shared experience," said Sen. Karen Martinez (D-CA), who co-sponsored the bill. "When everyone has an equal chance of being unhoused next month, we're all in this together. That's true equity."</p>
+
+                <p>To ensure fairness, all participants will pay identical property taxes based on the national average, regardless of their assignment. Citizens assigned to mansions in Beverly Hills will pay the same $2,847 monthly housing tax as those assigned to studio apartments in rural Kansas or abandoned warehouses in Detroit.</p>
+
+                <p>"This eliminates the unfair advantage of location," explained Winters. "Why should someone in a desirable area pay more? Under this system, a Wall Street executive and a teacher have exactly the same chance of being assigned to a penthouse or a tent under a highway overpass."</p>
+
+                <div class="pull-quote">
+                    "When everyone has an equal chance of being unhoused next month, we're all in this together."
+                    <div style="margin-top: 12px; font-size: 16px; font-weight: 400; font-style: normal;">— Sen. Karen Martinez (D-CA)</div>
+                </div>
+
+                <p>The DHC, which will employ over 45,000 compliance officers nationwide, will enforce the system through a tiered fine structure. First-time offenders who refuse to vacate their property face $10,000 fines. Repeat offenders face up to six months in federal prison and permanent disqualification from the housing lottery.</p>
+
+                <p>"We anticipate near-total compliance," Winters said. "When people realize they could be randomly assigned to a beautiful home next month, they'll participate willingly."</p>
+
+                <p>Early reactions to the policy have been mixed. Jennifer Morrison, a Denver homeowner of 15 years, expressed frustration about leaving behind her daughter's childhood bedroom, her late mother's piano, and a vegetable garden she spent a decade cultivating.</p>
+
+                <p>"I understand we're solving homelessness, but I'm worried about where I'll end up next month," Morrison said. "My daughter has a severe peanut allergy, and there's no way to know if the previous occupant of our next assignment kept peanuts in the house. Also, I have no idea what to do with my dog. The suitcase restriction doesn't exactly accommodate pets."</p>
+
+                <p>DHC officials acknowledged that pets, along with medical equipment, family heirlooms, and children's belongings beyond one suitcase each, would need to be "creatively managed" by participants.</p>
+
+                <p>Meanwhile, Marcus Chen, currently experiencing homelessness in San Francisco, offered cautious optimism. "I'm guaranteed housing next month, which is more than I have now," Chen said. "Though I'm not sure what happens the month after that. And I've been on a wait list for supportive housing with mental health services for three years — not sure how that works if I'm constantly moving."</p>
+
+                <p>When asked why Congress chose a lottery system rather than investing in new housing construction, Rep. Thornton was emphatic.</p>
+
+                <p>"Building new housing is simply too expensive," Thornton explained. "The Congressional Budget Office estimates this program will cost $8.2 billion annually to administer, compared to hundreds of billions to actually build affordable housing. This is the fiscally responsible choice."</p>
+
+                <p>The DHC has already begun developing the housing lottery algorithm, which will account for factors including family size, medical needs, and geographic employment requirements. However, Secretary Winters noted that "flexibility is key."</p>
+
+                <p>"If someone needs to be near a hospital for weekly dialysis treatments, but the lottery assigns them to rural Montana, we encourage them to make arrangements," Winters said. "Perhaps a friend or relative could drive them the 200 miles. That's the kind of community spirit this program will foster."</p>
+
+                <div class="pull-quote">
+                    "Perhaps a friend or relative could drive them the 200 miles. That's the kind of community spirit this program will foster."
+                    <div style="margin-top: 12px; font-size: 16px; font-weight: 400; font-style: normal;">— DHC Secretary Patricia Winters</div>
+                </div>
+
+                <p>Real estate industry groups have largely supported the legislation, noting that property values become "irrelevant" when occupancy is randomized monthly. "This eliminates the housing market entirely," said National Association of Realtors spokesperson David Park. "Which means we can focus on our true calling: compliance consulting for the DHC."</p>
+
+                <p>Several states have already begun preparing for implementation. California announced it will integrate the system with existing DMV infrastructure, requiring citizens to update their address monthly in person at DMV offices. The state estimates average wait times of three to four hours.</p>
+
+                <p>Critics of the legislation, including housing advocacy groups and constitutional law experts, have raised concerns about forced displacement, property rights, and the sheer logistical impossibility of moving 330 million people monthly. However, these groups were largely excluded from the legislative process.</p>
+
+                <p>"We held extensive hearings," countered Rep. Thornton. "We heard from economists, policy experts, and DHC consultants. Everyone agreed this was the most innovative solution to homelessness they'd ever seen."</p>
+
+                <p>When pressed about whether the government considered simply building more housing to address the shortage causing homelessness, Thornton looked puzzled.</p>
+
+                <p>"Build housing?" he asked. "Why would we do that when we already have 330 million housing units? The problem isn't supply — it's distribution. And now we've solved it."</p>
+
+                <p>The Fair Housing Opportunity Act takes effect February 1st, 2026. The DHC has launched a public awareness campaign with the slogan: "Every Home, Every Person, Every Month — That's Opportunity."</p>
+
+                <p>Citizens are encouraged to download the DHC app and create profiles ahead of the first lottery drawing, scheduled for January 31st. The app currently has a 1.2-star rating, with most reviewers noting it crashes when attempting to input family size or medical requirements.</p>
+
+                <p>President Jameson, who signed the bill Thursday afternoon, called it "a proud moment for American innovation."</p>
+
+                <p>"Other countries build housing," the President said at the signing ceremony. "But America? We think outside the box. We redistribute. We create opportunity. That's what makes us exceptional."</p>
+
+                <p>The Department of Housing Compliance will begin accepting applications for the 45,000 compliance officer positions next week. The agency notes that officers should "pack light" as their own housing assignments will also be randomized monthly.</p>
+            </div>
+        </article>
+
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-title">Related Stories</div>
+                <div class="related-article">
+                    <div class="related-title">DHC App Crashes on Launch Day, Millions Unable to Register for Housing Lottery</div>
+                    <div class="related-meta">2 hours ago</div>
+                </div>
+                <div class="related-article">
+                    <div class="related-title">Moving Companies Report 18-Month Backlog as Nation Prepares for Monthly Relocations</div>
+                    <div class="related-meta">5 hours ago</div>
+                </div>
+                <div class="related-article">
+                    <div class="related-title">Pet Shelters at Capacity as Families Abandon Animals Before First Housing Lottery</div>
+                    <div class="related-meta">1 day ago</div>
+                </div>
+                <div class="related-article">
+                    <div class="related-title">Real Estate Market Collapses as Property Values Become 'Meaningless,' Industry Leaders Say</div>
+                    <div class="related-meta">2 days ago</div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Most Popular</div>
+                <div class="related-article">
+                    <div class="related-title">Opinion: I Spent 30 Years Building My Home. Now I Have 48 Hours to Leave.</div>
+                    <div class="related-meta">45,382 views</div>
+                </div>
+                <div class="related-article">
+                    <div class="related-title">Explaining the Housing Lottery: What You Need to Know Before February 1st</div>
+                    <div class="related-meta">38,941 views</div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">THE EAGLE ERA</div>
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Advertise</a>
+            </div>
+            <div class="footer-copyright">
+                © 2026 The Eagle Era. All rights reserved. | A satirical news publication for educational purposes.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
